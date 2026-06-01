@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard de monitoreo - CIBERSEGURIDAD</title>
+<link rel="icon" href="favicon.ico/favicon-96x96.png" type="image/x-icon">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color:#f4f6f8;
+        margin: 20px;
+    }
+    .dashboard {
+        background-color:#fff;
+        border: 2px solid #ccc;
+        padding : 20px;
+        border-radius: 10px;
+        width: 800px;
+        margin:auto;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+    th, td {
+        border:1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+    th {
+background-color: #e0e0e0;
+    }
+    mark {
+        background-color:red;
+        color:white;
+        font-weight:bold;
+    }
+    ul {
+        background-color:#f9f9f9;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #007b00;
+        color:white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    button:hover {
+        background-color: #005a00;
+    }
+    blockquote {
+        font-style: italic;
+        color: #555;
+        border-left: 4px solid #007b00;
+        padding-left: 10px;
+    }
+</style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>dashboard de Monitoreo</h1>
+        <h2>Estado de Servidores</h2>
+     <!--- Tabla de servidores-->
+      <table>
+     <tr>
+   <th>IP</th>
+   <th>Nombre</th>
+   <th>Estado</th>
+    </tr>
+    <tr>
+        <td>192.168.1.10</td>
+        <td>Servidor central</td>
+        <td><mark>Offline</mark></td>
+    </tr>
+    <tr>
+    <td>192.168.1.11</td>
+    <td>Servidor backup</td>
+    <td>servidor online</td>
+     </tr>
+     <tr>
+        <td>192.168.1.12</td>
+        <td>Servidor Web</td>
+        <td>Online</td>
+     </tr>
+ </table>
+ <!-- Lista de alertas-->
+  <h3> Alertas recientes</h3>
+  <ul>
+    <li> Fallo de conexión en servidor central</li>
+    <li>Actualizacion de seguridad aplicada</li>
+ <li>Reinicio programado completado</li>
+  </ul>
+  <!-- Botón-->
+   <button>Reiniciar servidor</button>
+   <!--Comentario tecnico-->
+   <!-- Este div actúa como contenedor principal del Dashboard. 
+         La tabla muestra el estado de los servidores y usa <mark> para resaltar los críticos. 
+         El botón permite simular una acción de reinicio. -->
+
+         <!-- Cita de política -->
+          <blockquote>
+            "La seguridad de los datos es responsabilidad compartida entre el sistema y sus
+            usuarios"
+          </blockquote>
+    </div>
+</body>
+</html>
