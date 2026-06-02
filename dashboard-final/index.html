@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es"> <!--se encarga del idioma-->
+<head>
+<meta charset="UTF-8"><!--configura la codificacion de caracteres-->
+<title>Dashboard de monitoreo - CIBERSEGURIDAD</title>
+<link rel="icon" href="favicon.ico/favicon-96x96.png" type="image/x-icon"> <!--icono de la pestaña-->
+<style> /*aqui define los estilos visuales de la pagina*/
+    body {/*controla la fuente,color de fondo y margenes generales*/
+ 
+
+        font-family: Arial, sans-serif; /*fuente principal*/
+        background-color:#f4f6f8; /*color de fondo general*/
+        margin: 20px; /*espaciado alrededor del contenido*/
+    }
+    .dashboard { /*conenedor principal del panel,define fondo,bordes y tamaño */
+        background-color:#fff; /*fondo blanco para el panel*/
+        border: 2px solid #ccc; /*borde gris*/
+        padding : 20px; /*espaciado interno*/
+        border-radius: 10px; /*encargado de los bordes,en este caso redondeado*/
+        width: 800px; /*encargado del ancho fijo del panel*/
+        margin:auto; /* Centra el panel en la página */
+    }
+    table {  /* Estilo general de la tabla: ancho completo, bordes y espaciado */
+        width: 100%; /*mide el ancho de la tabla*/
+        border-collapse: collapse; /*elimina espacios entre bordes*/
+        margin-bottom: 20px; /*se encarga de los espacios debajo de la tabla*/
+    }
+    th, td {/* Estilo de las celdas: bordes, alineación y espaciado interno */
+        border:1px solid #ddd; /*bordes de celdas*/
+        padding: 8px; /*espaciado interno en celdas*/
+        text-align: center; /*centra el texto*/
+    }
+    th {  /* Estilo específico para los encabezados de la tabla */
+background-color: #e0e0e0; /*color de fondo para encabezados*/
+    }
+    mark { /* Estilo para resaltar texto crítico dentro de la tabla */
+        background-color:red;
+        color:white;
+        font-weight:bold;
+    }
+    ul {  /* Estilo para listas de alertas: fondo, espaciado y bordes */
+        background-color:#f9f9f9;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    button { /* Estilo del botón: color, tamaño, bordes y comportamiento al pasar el mouse */
+        background-color: #007b00;
+        color:white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    button:hover { 
+        background-color: #005a00;
+    }
+    blockquote {  /* Estilo para citas destacadas: cursiva, color y línea lateral */
+        font-style: italic;
+        color: #555;
+        border-left: 4px solid #007b00;
+        padding-left: 10px;
+    }
+</style>
+</head>
+<body>
+ <!-- Imagen fija al lado izquierdo -->
+    <img src="R.png" alt="R.png" 
+         style="position: fixed; left: 20px; top: 50%; transform: translateY(-50%); width: 200px;">
+
+
+    <div class="dashboard"> <!-- Contenedor principal del dashboard -->
+        <h1>dashboard de Monitoreo</h1><!-- Título principal -->
+        <h2>Estado de Servidores</h2>  <!-- Subtítulo -->
+     <!--- Tabla de los estados de los servidores-->
+      <table>
+     <tr>
+   <th>IP</th> <!-- Encabezado de columna: dirección IP -->
+   <th>Nombre</th><!-- Encabezado de columna: nombre del servidor -->
+   <th>Estado</th><!-- Encabezado de columna: estado del servidor -->
+    </tr>
+    <tr>
+        <td>192.168.1.10</td> <!-- Celda con IP -->
+        <td>Servidor central</td><!-- Celda con nombre -->
+        <td><mark>Offline</mark></td><!-- Celda con estado resaltado -->
+    </tr>
+    <tr>
+    <td>192.168.1.11</td>
+    <td>Servidor backup</td>
+    <td>servidor online</td>
+     </tr>
+     <tr>
+        <td>192.168.1.12</td>
+        <td>Servidor Web</td>
+        <td>Online</td>
+     </tr>
+ </table>
+ <!-- Lista de alertas recientes-->
+  <h3> Alertas recientes</h3>
+  <ul>
+    <li> Fallo de conexión en servidor central</li>
+    <li>Actualizacion de seguridad aplicada</li>
+ <li>Reinicio programado completado</li>
+  </ul>
+  <!-- Botón que simula una acción -->
+   <button>Reiniciar servidor</button>
+   <!--Comentario tecnico-->
+   <!-- Este div actúa como contenedor principal del Dashboard. 
+         La tabla muestra el estado de los servidores y usa <mark> para resaltar los críticos. 
+         El botón permite simular una acción de reinicio. -->
+
+         <!-- Cita de política -->
+          <blockquote>
+            "La seguridad de los datos es responsabilidad compartida entre el sistema y sus
+            usuarios"
+          </blockquote>
+    </div>
+</body>
+</html>
